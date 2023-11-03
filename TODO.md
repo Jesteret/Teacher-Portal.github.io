@@ -1,0 +1,3 @@
+- add more games
+- fix bugs
+- sue myself
