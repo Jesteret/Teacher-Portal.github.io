@@ -1,0 +1,18 @@
+button {
+box-shadow: 0 0 5px ,
+0 0 25px red;
+}
+button:hover {
+box-shadow: 0 0 5px red,
+0 0 25px red, 0 0 50px red,
+0 0 100px red, 0 0 200px red;
+}
+
+button{
+  background-color: #ff0000;
+  border: none;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-color: white;
+  color: #fff;

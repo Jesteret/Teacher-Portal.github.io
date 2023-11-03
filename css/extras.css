@@ -1,0 +1,83 @@
+body {
+  color: #fff;
+}
+
+
+
+h1 {
+  font-size: 50px;
+  margin: 20px;
+}
+
+h2{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.main-content {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.box {
+  background: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  padding-left: 47px;
+  padding-right: 47px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#title {
+  background: #27292e;
+  border: none;
+  padding: 15px 20px;
+  width: 50vw;
+  color: #b03232;
+  text-align: center;
+  margin: 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  text-decoration-style: solid;
+  text-decoration-color: #fff;
+  transition: 300ms;
+  outline: 3px solid #b03232;
+  font-size: 16px;
+}
+
+#icon {
+  background: #27292e;
+  border: none;
+  padding: 15px 20px;
+  width: 50vw;
+  color: #b03232;
+  text-align: center;
+  margin: 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  text-decoration-style: solid;
+  text-decoration-color: #fff;
+  transition: 300ms;
+  outline: 3px solid #b03232;
+  font-size: 16px;
+}
+
+::placeholder {
+  color: #fff;
+  font-size: 16px;
+}

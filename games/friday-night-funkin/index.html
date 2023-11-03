@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLEXILE ARCADE | Friday Night Funkin</title>
+      <link rel="icon" type="image/png" href="https://cdn.glitch.global/5c2cb934-0c5a-4e22-9abd-1591c7cf6a9c/6e5e1dcc-f1f3-492d-a396-f3d7077ee68f.image-fotor-bg-remover-20230806125936%20(1).png?v=1691387992370"> <!-- Replace "favicon.png" with your actual favicon image file name -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script async="async" data-cfasync="false" src="//ophoacit.com/1?z=5961567"></script>
+  <style>
+    body {
+      background-color: #222;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background-color: #b03232;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+
+    .back-button:hover {
+      background-color: #a32727;
+    }
+
+  #game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+
+#game-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin-bottom: 0px;
+}
+
+#server-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#server-buttons a {
+  display: block;
+  position: relative;
+  top: 0;
+  margin: 0 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #EFEFEF;
+  background-color: #DD4A68;
+  transition: background-color 0.3s ease;
+}
+
+#server-buttons a:hover {
+  background-color: #FF6B88;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f;
+    z-index: 9999;
+    user-select: none;
+}
+
+#loader.hide {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#loader h1 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 7vw;
+    font-weight: 700;
+    text-align: center;
+}
+
+#loader h1 span {
+    color: #ff0006;
+}
+
+#loader p {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.2vw;
+    font-weight: 500;
+    text-align: center;
+}
+
+#loader .loader {
+    position: absolute;
+    top:63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6vw;
+    height:6vw;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    border-top-color: #941417;
+    animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="/index.html" class="back-button">&larr; Back</a>
+  </header>
+  <div id="game-container">
+    <iframe id="gameFramey" src="https://3kh0.github.io"></iframe>
+  </div>
+  <script>
+c   backButton.addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const src = urlParams.get('gfile');
+    document.getElementById('gameFramey').src = 'https://tungsten-jagged-brace.glitch.me/service/go/hvtrs8%2F-mcil.fd%3Avv504gqqk0.cmrlkf%7Barp%2Ccmm-ppoheatq%2Fdrkdcyliehvfwniil%2Fknfez.jtol' 
+  </script>
+  <script src="script.js"></script>
+</body>
+  
+  <script type="text/javascript" src="/js/main.js"></script>
