@@ -1,0 +1,76 @@
+.cloak {
+  cursor: pointer;
+  background-color: #b03232;
+  border: none;
+  color: rgb(248, 244, 244);
+  padding: 13px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  transform: scale(1);
+}
+.cloak:hover {
+  transform: scale(1.2);
+  border-radius: 5px;
+}
+.cloak:active {
+  transform: scale(0.8);
+  border-radius: 12px;
+}
+
+/* Style for input boxes */
+.input {
+  width: 200px;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for dropdown */
+#premadecloaks {
+  width: 220px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* Style for buttons */
+.button {
+  padding: 8px 16px;
+  background-color: #b03232;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.button:hover {
+  transform: scale(1.1);
+  border-radius: 5px;
+}
+.button:active {
+  transform: scale(0.9);
+  border-radius: 10px;
+}
+
+
+/* Style for section text */
+.section-text {
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Center the content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}

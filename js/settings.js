@@ -1,15 +1,20 @@
+//thanks 3kh0
 var tab = localStorage.getItem("tab");
 
 if (tab) {
+  // If there is saved data, try to parse it
   try {
     var tabData = JSON.parse(tab);
   } catch {
+    // If there is an error in parsing, create an empty object
     var tabData = {};
   }
 } else {
+  // If there is no saved data, create an empty object
   var tabData = {};
 }
 
+// Set the title and icon fields to the values saved in tabData, if they exist
 if (tabData.title) {
   document.getElementById("title").value = tabData.title;
 }
@@ -17,11 +22,13 @@ if (tabData.icon) {
   document.getElementById("icon").value = tabData.icon;
 }
 
+// Default tab settings
 var settingsDefaultTab = {
   title: "PLEXILE ARCADE | Settings",
-  icon: "/favicon.png",
+  icon: "https://cdn.glitch.global/5c2cb934-0c5a-4e22-9abd-1591c7cf6a9c/6e5e1dcc-f1f3-492d-a396-f3d7077ee68f.image-fotor-bg-remover-20230806125936%20(1).png?v=1691387992370",
 };
 
+// Function to set the document title
 function setTitle(title = "") {
   if (title) {
     document.title = title;
@@ -29,27 +36,35 @@ function setTitle(title = "") {
     document.title = settingsDefaultTab.title;
   }
 
+  // Update the saved tab data with the new title
   var tab = localStorage.getItem("tab");
 
   if (tab) {
+    // If there is saved data, try to parse it
     try {
       var tabData = JSON.parse(tab);
     } catch {
+      // If there is an error in parsing, create an empty object
       var tabData = {};
     }
   } else {
+    // If there is no saved data, create an empty object
     var tabData = {};
   }
 
   if (title) {
+    // If there is a new title, update tabData
     tabData.title = title;
   } else {
+    // If the title is empty, delete the title field from tabData
     delete tabData.title;
   }
 
+  // Save the updated tab data to localStorage
   localStorage.setItem("tab", JSON.stringify(tabData));
 }
 
+// Function to set the favicon
 function setFavicon(icon) {
   if (icon) {
     document.querySelector("link[rel='icon']").href = icon;
@@ -57,68 +72,86 @@ function setFavicon(icon) {
     document.querySelector("link[rel='icon']").href = settingsDefaultTab.icon;
   }
 
+  // Update the saved tab data with the new icon
   var tab = localStorage.getItem("tab");
 
   if (tab) {
+    // If there is saved data, try to parse it
     try {
       var tabData = JSON.parse(tab);
     } catch {
+      // If there is an error in parsing, create an empty object
       var tabData = {};
     }
   } else {
+    // If there is no saved data, create an empty object
     var tabData = {};
   }
 
   if (icon) {
+    // If there is a new icon, update tabData
     tabData.icon = icon;
   } else {
+    // If the icon is empty, delete the icon field from tabData
     delete tabData.icon;
   }
 
+  // Save the updated tab data to localStorage
   localStorage.setItem("tab", JSON.stringify(tabData));
 }
 
 function setCloak() {
-  var cloak = document.getElementById("premadecloaks").value;
+  // applies only to premade cloaks
+  var cloak = document.getElementById("premadecloaks").value; // cloak seems kind of weird when you spell it out
   switch (cloak) {
-    case "search":
-      setTitle("Google");
-      setFavicon("./images/cloaks/Google Search.ico");
-      location.reload();
+    case "schoology": // Home | Schoology
+      setTitle("Home | Schoology");
+      setFavicon("https://cdn.glitch.global/1e1f58d5-da0b-4978-8e5d-0c4e0d4dfc15/thumbnails_dd047d6e-ab40-4710-acd0-b789d1509391.image.png?v=1699160446068");
+
       break;
-    case "itchio":
-      setTitle("Top free NSFW games for web");
-      setFavicon("./images/cloaks/D23D344B-4CB0-4799-B525-F4E4F3A36728.ico");
-      location.reload();
+    case "myapps": // My Apps
+      setTitle("My Apps");
+      setFavicon("https://cdn.glitch.global/1e1f58d5-da0b-4978-8e5d-0c4e0d4dfc15/62d6972f-fade-4ff7-92e4-80a47d6d98be.image.png?v=1699160605658");
+
       break;
-    // ... (other cases removed for brevity)
+    case "gmail": // Gmail
+      setTitle("Gmail");
+      setFavicon("https://ar.wikipedia.org/favicon.ico");
+
+      break;
+    case "Google Drive": // Google Drive
+      setTitle("Google Drive");
+      setFavicon("https://www.bilibili.com/favicon.ico");
+
+      break;
+    case "newtab": // New Tab
+      setTitle("New Tab");
+      setFavicon("/img/cloaks/Google Drive.ico");
+
+      break;
+    case "googlesites": // Google Sites
+      setTitle("Google Sites");
+      setFavicon("/img/cloaks/9A58D8BC-6595-476A-AD95-B6D8880683C8.ico");
+
+      break;
+    case "googleclassroom": // Google Classroom
+      setTitle("Google Classroom");
+      setFavicon("/img/cloaks/YouTube.ico");
+
+      break;
+    case "skyward": // Login - Powered By Skyward
+      setTitle("Login - Powered By Skward");
+      setFavicon("/img/cloaks/Gmail.ico");
+
+      
+      break;
   }
 }
-
+// Function to reset the tab settings to default
 function resetTab() {
   document.title = settingsDefaultTab.title;
   document.querySelector("link[rel='icon']").href = settingsDefaultTab.icon;
   document.getElementById("title").value = "";
   document.getElementById("icon").value = "";
   localStorage.setItem("tab", JSON.stringify({}));
-}
-
-function setTheme(theme) {
-  localStorage.setItem("theme", theme);
-  document.body.setAttribute("theme", theme);
-  document.body.style = "";
-  localStorage.removeItem("theme_color");
-
-  themes.forEach((palette) => {
-    if (palette.theme == theme) {
-      document.querySelector("#theme_color").value = palette.color;
-    }
-  });
-}
-
-function setThemeColor(theme) {
-  localStorage.setItem("theme", "custom");
-  localStorage.setItem("theme_color", theme);
-  document.body.setAttribute("theme", "custom");
-  document.body.style = `--theme: ${theme}; --background: ${getContrastHex(theme)}; --text: ${getColorHex(theme)}; --text-secondary: ${getColorHex(theme)};`;
 }

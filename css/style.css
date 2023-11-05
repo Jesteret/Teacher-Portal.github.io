@@ -1,206 +1,107 @@
-//thanks 3kh0
-var tab = localStorage.getItem("tab");
-
-if (tab) {
-  // If there is saved data, try to parse it
-  try {
-    var tabData = JSON.parse(tab);
-  } catch {
-    // If there is an error in parsing, create an empty object
-    var tabData = {};
-  }
-} else {
-  // If there is no saved data, create an empty object
-  var tabData = {};
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-// Set the title and icon fields to the values saved in tabData, if they exist
-if (tabData.title) {
-  document.getElementById("title").value = tabData.title;
-}
-if (tabData.icon) {
-  document.getElementById("icon").value = tabData.icon;
-}
-
-// Default tab settings
-var settingsDefaultTab = {
-  title: "Settings",
-  icon: "/img/canvas.ico",
-};
-
-// Function to set the document title
-function setTitle(title = "") {
-  if (title) {
-    document.title = title;
-  } else {
-    document.title = settingsDefaultTab.title;
-  }
-
-  // Update the saved tab data with the new title
-  var tab = localStorage.getItem("tab");
-
-  if (tab) {
-    // If there is saved data, try to parse it
-    try {
-      var tabData = JSON.parse(tab);
-    } catch {
-      // If there is an error in parsing, create an empty object
-      var tabData = {};
-    }
-  } else {
-    // If there is no saved data, create an empty object
-    var tabData = {};
-  }
-
-  if (title) {
-    // If there is a new title, update tabData
-    tabData.title = title;
-  } else {
-    // If the title is empty, delete the title field from tabData
-    delete tabData.title;
-  }
-
-  // Save the updated tab data to localStorage
-  localStorage.setItem("tab", JSON.stringify(tabData));
+header {
+  background-color: #0e70b0;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-// Function to set the favicon
-function setFavicon(icon) {
-  if (icon) {
-    document.querySelector("link[rel='icon']").href = icon;
-  } else {
-    document.querySelector("link[rel='icon']").href = settingsDefaultTab.icon;
-  }
-
-  // Update the saved tab data with the new icon
-  var tab = localStorage.getItem("tab");
-
-  if (tab) {
-    // If there is saved data, try to parse it
-    try {
-      var tabData = JSON.parse(tab);
-    } catch {
-      // If there is an error in parsing, create an empty object
-      var tabData = {};
-    }
-  } else {
-    // If there is no saved data, create an empty object
-    var tabData = {};
-  }
-
-  if (icon) {
-    // If there is a new icon, update tabData
-    tabData.icon = icon;
-  } else {
-    // If the icon is empty, delete the icon field from tabData
-    delete tabData.icon;
-  }
-
-  // Save the updated tab data to localStorage
-  localStorage.setItem("tab", JSON.stringify(tabData));
+header h1 {
+  margin: 0;
+  font-size: 2em;
 }
 
-function setCloak() {
-  // applies only to premade cloaks
-  var cloak = document.getElementById("premadecloaks").value; // cloak seems kind of weird when you spell it out
-  switch (cloak) {
-    case "search": // Google Search
-      setTitle("Google");
-      setFavicon("/img/cloaks/Google Search.ico");
+title {
+  padding-top: 20%;
+}
 
-      break;
-    case "itchio": // itch.io
-      setTitle("Top free NSFW games for web");
-      setFavicon("/img/cloaks/D23D344B-4CB0-4799-B525-F4E4F3A36728.ico");
+body {
+  background-color: #5e7594;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-      break;
-    case "wikipedia": // wikipedia
-      setTitle("ÙˆÙŠÙƒÙŠØ¨ÙŠØ¯ÙŠØ§ - Ø¬Ù‡Ø§Ø¯");
-      setFavicon("https://ar.wikipedia.org/favicon.ico");
+main {
+  padding: 20px;
+  overflow-wrap: break-word;
+}
 
-      break;
-    case "bsite": // billibilli
-      setTitle("Billibilli");
-      setFavicon("https://www.bilibili.com/favicon.ico");
+section {
+  margin-bottom: 20px;
+}
 
-      break;
-    case "drive": // Google Drive
-      setTitle("My Drive - Google Drive");
-      setFavicon("/img/cloaks/Google Drive.ico");
+section h2 {
+  margin-top: 0;
+}
 
-      break;
-    case "librex": // LibreX
-      setTitle("LibreX");
-      setFavicon("/img/cloaks/9A58D8BC-6595-476A-AD95-B6D8880683C8.ico");
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
 
-      break;
-    case "youtube": // YouTube
-      setTitle("YouTube");
-      setFavicon("/img/cloaks/YouTube.ico");
+  nav ul {
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
 
-      break;
-    case "gmail": // Gmail
-      setTitle("Gmail");
-      setFavicon("/img/cloaks/Gmail.ico");
-
-      break;
-    case "calendar": // Google Calendar
-      setTitle("Google Calendar");
-      setFavicon("/img/cloaks/Calendar.ico");
-
-      break;
-    case "meets": // Google Meet
-      setTitle("Google Meet");
-      setFavicon("/img/cloaks/Meet.ico");
-
-      break;
-    case "classroom": // Google Classroom
-      setTitle("Classes");
-      setFavicon("/img/cloaks/Classroom.png");
-
-      break;
-    case "canvas": // Canvas
-      setTitle("Canvas");
-      setFavicon("/img/cloaks/Canvas.ico");
-
-      break;
-    case "zoom": // Zoom
-      setTitle("Zoom");
-      setFavicon("/img/cloaks/Zoom.ico");
-
-      break;
-    case "nitter": // Nitter
-      setTitle("nitter");
-      setFavicon("/img/cloaks/63DFB320-0EEC-4F06-AF02-C50DFD2B49AB.ico");
-
-      break;
-    case "teddit": // Teddit
-      setTitle("teddit");
-      setFavicon("/img/cloaks/EB4D8FE9-10E9-44B8-A6CE-3F9A0040F94A.ico");
-
-      break;
-    case "cornhub": // Cornhub
-      setTitle("Cornhub");
-      setFavicon("/img/cloaks/8FE4C273-914D-431D-907E-3FCF5BB0399F.ico");
-
-      break;
-    case "indivious": // Indivious
-      setTitle("Indivious");
-      setFavicon("/img/cloaks/2255E848-AB69-43C1-B470-DBFDA40FAD10.ico");
-
-      break;
-    case "khan": // Khan Academy
-      setTitle("Dashboard | Khan Academy");
-      setFavicon("/img/cloaks/Khan Academy.ico");
-
-      break;
+  nav li {
+    padding: 0.5rem 0;
   }
 }
-// Function to reset the tab settings to default
-function resetTab() {
-  document.title = settingsDefaultTab.title;
-  document.querySelector("link[rel='icon']").href = settingsDefaultTab.icon;
-  document.getElementById("title").value = "";
-  document.getElementById("icon").value = "";
-  localStorage.setItem("tab", JSON.stringify({}));
+
+#gs {
+  cursor: pointer;
+  background-color: #413d3d;
+  border: none;
+  color: rgb(248, 244, 244);
+  padding: 10px 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
+#gs:hover {
+  transform: scale(1.07);
+  border-radius: 6px;
+}
+#gs:active {
+  transform: scale(0.93);
+  border-radius: 10px;
+}
+
+.button {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 1s;
+  padding-bottom: 5px;
+}
+
+.horizontal-items {
+  display: flex;
+  justify-content: left;
+}
+
+.request {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 1s;

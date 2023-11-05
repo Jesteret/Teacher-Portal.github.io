@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background: #0e70b0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  padding-left: 0.05rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: rgb(187, 187, 187);
+}

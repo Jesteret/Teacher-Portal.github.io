@@ -131,7 +131,7 @@ a:hover {
 }
 
 select {
-  background: #114a29;
+  background: #27292e;
   font-family: 'Montserrat';
   color: #fff;
   border-radius: 5px;
@@ -150,6 +150,6 @@ select:active {
 
 option {
   font-family: 'Inter';
-  color: #fff;
+  color: #b03232;
   padding: 5px;
 }
