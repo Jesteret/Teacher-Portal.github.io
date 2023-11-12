@@ -1,74 +1,49 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>PLEXILE ARCADE | Fix Roblox</title>
-    <link rel="icon" type="image/png" href="https://cdn.glitch.global/5c2cb934-0c5a-4e22-9abd-1591c7cf6a9c/6e5e1dcc-f1f3-492d-a396-f3d7077ee68f.image-fotor-bg-remover-20230806125936%20(1).png?v=1691387992370"> <!-- Replace "favicon.png" with your actual favicon image file name -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #search-container {
+            margin: 20px;
+        }
+    </style>
+    <title>Search Bar</title>
 </head>
 <body>
-    <!-- Your page content here -->
+
+<div id="search-container">
+    <label for="search">Search:</label>
+    <input type="text" id="search" oninput="searchText()">
+</div>
+
+<div id="content">
+    <p>This is an example text. It could be a long passage with various words.</p>
+    <p>Another paragraph with more words for testing.</p>
+    <p>Some additional content for demonstration purposes.</p>
+</div>
+
+<script>
+    function searchText() {
+        var searchInput = document.getElementById('search').value.toLowerCase();
+        var content = document.getElementById('content');
+        var paragraphs = content.getElementsByTagName('p');
+
+        for (var i = 0; i < paragraphs.length; i++) {
+            var text = paragraphs[i].innerText.toLowerCase();
+            var found = text.includes(searchInput);
+
+            if (found) {
+                paragraphs[i].style.backgroundColor = 'yellow';
+            } else {
+                paragraphs[i].style.backgroundColor = ''; // Reset background color
+            }
+        }
+    }
+</script>
+
 </body>
 </html>
-
-    <title>PLEXILE ARCADE</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/css/navbar.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2W1BSNMG9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Y2W1BSNMG9');
-</script>
-  <title>Platformer.io | Tomb of the Mask</title>
-  <link rel="icon" href="/favicon.png" type="image/xcon" />
-  <script src="/js/navbar.js" defer></script>
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-<nav class="nav">
-      <i class="uil uil-bars navOpenBtn"></i>
-      <a href="home.html" class="logo"> <img src="https://cdn.glitch.global/8533ca4b-6fa9-468c-a0bb-b90172e91dcc/04d0f9c2-4d9c-4db7-b356-751b458fdf3b.image.png?v=1691895722806">
-      <ul class="nav-links">
-         <i class="uil uil-times navCloseBtn"></i>
-          <h1>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</h1>
-         <li><a href="/home.html"><i class="" style="margin-right: 5px;"></i>HOME⠀</a></li>
-         <li><a href="/index.html"><i class="" style="margin-right: 5px;"></i>GAMES⠀</a></li>
-         <li><a href="/about.html"><i class="" style="margin-right: 5px;"></i>APPS⠀</a></li>
-         <li><a href="/location.html"><i class="" style="margin-right: 5px;"></i>PROXY⠀</a></li>
-         <li><a href="/settings.html"><i class="fa-solid fa-gear" style="margin-right: 5px;"></i></a></li>
-        </ul>
-      </nav>
-<div class="main-content">
-  <h4>3<h4>
-<h3>
-  344
-  </h3>
-  <h2>
-    2
-  </h2>
-      <b style="color: #b03232;"<h1>2<br></h1>
-  <b style="color: #b03232;"<h1><br></h1>
-<p1 style="font-size: 25px"></p1>
-  <details style="font-size: 20px">
-<summary style="font-size: 20px">  <p1 style="font-size: 25px">https://s4g7.glitch.me/</p1>
-  <details style="font-size: 20px">
-<summary style="font-size: 20px">  <p1 style="font-size: 25px">https://s2g7.onrender.com/</p1>
-  <details style="font-size: 20px">
-<summary style="font-size: 20px">  <p1 style="font-size: 25px">https://dazzling-salty-dragonfly.glitch.me</p1>
- </summary>
-  </details>
-  
-  
-  </body>
-<script src="/js/index.js"></script>
-</html>
-        <script type="text/javascript" src="/js/main.js"></script>
-
-
-  <script src="/js/settingss.js"></script>
-<script src="/js/indexx.js"></script>

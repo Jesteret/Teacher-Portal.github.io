@@ -1,0 +1,10 @@
+body {
+
+    background-image: url('https://cdn.glitch.global/08f7c976-6792-4b26-a388-c2dc4d1b77c5/ee916d01-9874-4f79-b15e-206a168f0960.image.png?v=1699761305112');
+    background-size: cover;
+    color: #fff; /* Set text color to contrast with the background */
+}
+
+.content {
+    text-align: center;
+}

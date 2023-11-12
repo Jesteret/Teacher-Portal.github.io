@@ -79,7 +79,7 @@ input:focus {
   padding-bottom: 3px;
   height: auto;
   bottom: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  background: linear-gradient(transparent, 
 }
 
 .game-card .title {
@@ -98,7 +98,7 @@ input:focus {
 .box {
   color: #fff;
   text-align: center;
-  background: #27292e;
+  background: #;
   padding: 5px;
   margin-left: 10px;
   margin-right: 10px;
