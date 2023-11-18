@@ -44,37 +44,31 @@ h4 {
 }
 
 #title {
-  background: #27292e;
-  border: none;
-  padding: 15px 20px;
-  width: 50vw;
-  color: #b03232;
-  text-align: center;
-  margin: 10px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  text-decoration-style: solid;
-  text-decoration-color: #fff;
-  transition: 300ms;
-  outline: 3px solid #b03232;
-  font-size: 16px;
+  height: 45px; 
+  width: 580px; 
+  border-radius: 100px; 
+  outline: none; 
+  border: 2px solid #b03232; 
+  background: #27292e; 
+  color: white; 
+  font-size: 16px; 
+  padding-right: 10px; 
+  padding-left: 255px;
+
 }
 
 #icon {
-  background: #27292e;
-  border: none;
-  padding: 15px 20px;
-  width: 50vw;
-  color: #b03232;
-  text-align: center;
-  margin: 10px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  text-decoration-style: solid;
-  text-decoration-color: #fff;
-  transition: 300ms;
-  outline: 3px solid #b03232;
-  font-size: 16px;
+  height: 45px; 
+  width: 580px; 
+  border-radius: 100px; 
+  outline: none; 
+  border: 2px solid #b03232; 
+  background: #27292e; 
+  color: white; 
+  font-size: 16px; 
+  padding-right: 10px; 
+  padding-left: 250px;
+ 
 }
 
 ::placeholder {

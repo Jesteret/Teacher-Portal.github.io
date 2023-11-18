@@ -25,20 +25,8 @@
 }
 
 input {
-  background: #27292e;
-  border: none;
-  padding: 15px 20px;
-  font-size: 16px;
-  width: 50vw;
-  color: #fff;
-  text-align: center;
-  margin: 10px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  text-decoration-style: solid;
-  text-decoration-color: #fff;
-  transition: 300ms;
-  outline: none;
+height: 45px; width: 580px; border-radius: 100px; outline: none; border: 2px solid #161515
+; background: #27292e; color: white; font-size: 16px; padding-right: 10px; padding-left: 210px;
 }
 
 input:focus {
