@@ -25,12 +25,12 @@
 }
 
 input {
-height: 45px; width: 580px; border-radius: 100px; outline: none; border: 2px solid #161515
+height: 45px; width: 580px; border-radius: 100px; outline: none; border: 1px solid #161515
 ; background: #27292e; color: white; font-size: 16px; padding-right: 10px; padding-left: 210px;
 }
 
 input:focus {
-  outline: 3px solid #b03232;
+  outline: 2px solid #b03232;
 }
 
 ::placeholder {

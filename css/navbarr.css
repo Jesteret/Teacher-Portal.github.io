@@ -306,6 +306,11 @@ img+a {
 
 .button:hover {
   background: #892929;
+    border-radius: 10px;
+  transition: all 0.2s ease !important;
+  transform: scale(1);
+    transform: scale(1.1);
+
 }
 
 .button:active {
@@ -360,3 +365,23 @@ img+a {
   padding-left: 5px;
   margin-bottom: 5px;
 }
+
+.social-icons .fa-github:hover {
+    border-radius: 10px;
+  transition: all 0.2s ease !important;
+  transform: scale(1);
+    transform: scale(1.1);
+  }
+
+.social-icons .fa-youtube:hover {
+    border-radius: 10px;
+  transition: all 0.2s ease !important;
+  transform: scale(1);
+    transform: scale(1.1);
+  }
+
+.social-icons .fa-discord:hover {
+    border-radius: 10px;
+  transition: all 0.2s ease !important;
+  transform: scale(1);
+    transform: scale(1.1);
