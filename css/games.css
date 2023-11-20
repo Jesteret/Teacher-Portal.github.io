@@ -93,8 +93,15 @@ input:focus {
   margin-bottom: 10px;
   border-radius: 10px;
   text-decoration-style: solid;
+  text-decoration-color: #ff text-align: center;
+  background: #;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  text-decoration-style: solid;
   text-decoration-color: #fff;
-}
 
 .box a {
   text-decoration-style: solid;
