@@ -385,3 +385,14 @@ img+a {
   transition: all 0.2s ease !important;
   transform: scale(1);
     transform: scale(1.1);
+  
+  }
+
+.social-icons.icon-rotate .fa-brands:hover,
+.social-icons.icon-rotate .fa:active {
+  -webkit-transform: scale(1.1) rotate(360deg);
+  -moz-transform: scale(1.1) rotate(360deg);
+  -ms-transform: scale(1.1) rotate(360deg);
+  -o-transform: scale(1.1) rotate(360deg);
+  transform: scale(1.1) rotate(360deg);
+}
