@@ -1,3 +1,3 @@
 setTimeout(function () {
-  window.location.href = 'https://plexile-arcade.glitch.me';
+  window.location.href = 'plexilearcade-main.zip';
 }, 5000);
