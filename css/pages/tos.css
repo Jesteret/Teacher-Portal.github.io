@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+
+:root {
+  --primary-clr: #2e2e2e;
+  --white: #5a3e75;
+  --text-clr: #2e2e2e;
+  --tabs-list-bg-clr: #6b4c8b;
+  --btn-hvr: #fff;
+}
+
+p {
+  text-transform: lowercase;
+}
+
+
+
+
+}
+
+body {
+  background: var(--primary-clr);
+  font-size: 12px;
+  color: #fff;
+  cursor: url("https://cdn.glitch.global/71103c69-9a4c-458c-9a77-05ee0f3c1324/af41186f-7f2e-4971-b572-f57a5b55d5c5.image.png?v=1701303445142"), auto;
+
+
+
+
