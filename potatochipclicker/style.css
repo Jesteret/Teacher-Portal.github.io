@@ -1,0 +1,327 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-image: url("https://cdn.glitch.global/f5c4ae53-0770-4715-8e29-51534e83cc83/fa6e5dda-a76e-431a-aa12-727748014746.image.png?v=1702092280725");
+  font-family: "Arial", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#game {
+  text-align: center;
+  position: relative;
+}
+
+#clickButton {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#clickButton img {
+  width: 185px;
+  height: 185px;
+  transition: transform 0.2s ease-in-out;
+}
+
+#clickButton::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background: url("https://cdn.glitch.global/f5c4ae53-0770-4715-8e29-51534e83cc83/0d093662-504c-41c5-971c-5026b0022f47.image.png?v=1702088151077")
+  no-repeat center center;
+  background-size: cover;
+  animation: rotate 4s linear infinite;
+  top: -14%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  filter: brightness(1.5);
+
+}
+
+#clickButton:hover img {
+  transform: scale(1.1);
+}
+
+#clickCount {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: "MonoLisa", sans-serif; /* Replace 'YourChosenFont' with the actual font name */
+  position: absolute;
+  top: -150px; /* Adjust the distance from the top */
+  left: -37%;
+  transform: translateX(20%);
+  display: inline-block;
+  padding: 10px;
+  background-color: yellow;
+  border: -3px solid yellow;
+  border-radius: 20px; /* Increased border-radius for curved edges */
+}
+
+.falling-chip {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: url("https://cdn.glitch.global/f5c4ae53-0770-4715-8e29-51534e83cc83/0b21189d-980b-4040-a6ec-51a93f18420c.image.png?v=1702085238757")
+    no-repeat center center;
+  background-size: cover;
+  animation: fall 2s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.plus-one {
+  position: absolute;
+  font-size: 24px;
+  color: #fff; /* Green color, you can adjust as needed */
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.jumping-chip {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url("https://cdn.glitch.global/f5c4ae53-0770-4715-8e29-51534e83cc83/0b21189d-980b-4040-a6ec-51a93f18420c.image.png?v=1702085238757")
+    no-repeat center center;
+  background-size: cover;
+  animation: jumpOut 0.5s ease-in-out;
+  transform-origin: bottom;
+}
+
+@keyframes jumpOut {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateY(-40px) scaleY(0.8);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+#game {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.achievements {
+  margin-top: 20px;
+}
+
+.achievement-popup {
+  background-color: #f0f018;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* Add this style for the progress bar */
+.progress-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 150px;
+  height: 25px;
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0; /* Start with 0 width */
+  background-color: #f5f507; /* Yellow color */
+  border-radius: 15px; /* Rounded corners */
+  text-align: center;
+  color: white;
+  line-height: 25px;
+  transition: width 0.5s;
+}
+
+/* Add styles for the start menu */
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.logo {
+  max-width: 2000px;
+  margin-bottom: 20px;
+  transition: transform 0.3s; /* Add a transition for smooth effect */
+}
+
+.menu-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #f5ed07; /* yellow color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s, font-size 0.3s;
+}
+
+.menu-button:hover {
+  background-color: #e8e10e; /* Darker green color on hover */
+  animation: shake 0.5s;
+}
+
+.logo:hover {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(-5px); /* Shake left and right by 5px */
+  }
+  50% {
+    transform: translateX(5px); /* Shake left and right by 5px */
+  }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(-5px); /* Shake left and right by 5px */
+  }
+  50% {
+    transform: translateX(5px); /* Shake left and right by 5px */
+  }
+}
+
+/* Add style for hiding/showing the game interface */
+.hidden {
+  display: none;
+}
+
+/* Add styles for the How to Play page */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.how-to-play-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #f5ed07;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f5ed07;
+  color: white;
+  text-decoration: none;
+  border-radius: 2 5px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e8e10e;
+}
+
+
+#potatoChipFactoryButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  position: fixed;
+  top: 52px;
+  right: 491px;
+  margin: 100px;
+  cursor: pointer;
+  background-color: #f5ed07; /* yellow color */
+  color: white;
+  border: none;
+  border-radius: 15px;
+  transition: background-color 0.3s, transform 0.3s, font-size 0.3s;
+    
+}
+
+#potatoChipFactoryButton:hover {
+background-color: #e8e10e; /* Darker green color on hover */
+  animation: shake 0.5s;
+    color: white;
+}
+
+
+.logoo {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logooo {
+  position: absolute;
+  top: 160%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
